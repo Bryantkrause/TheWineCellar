@@ -1,21 +1,8 @@
-const { songs } = require('../controllers')
+const { Wines, Users } = require('../models')
 
 module.exports = app => {
   // Create a new song
-  app.post('/', (req, res) => {
+  app.post('/wines/:id', (req, res) => {
     
     })
-  })
-
-  // Toggle whether the song has been listened to
-  app.put('/', (req, res) => {
-    
-    })
-  })
-
-  // Get all songs
-  app.get('/', (req, res) => {
-    
-    })
-  })
 }

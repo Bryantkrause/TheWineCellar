@@ -9,5 +9,5 @@ Users.belongsTo(Wines)
 
 module.exports = {
   Wines,
-  User
+  Users
 }

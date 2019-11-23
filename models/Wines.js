@@ -7,10 +7,11 @@ module.exports = (sequelize, Model, DataTypes) => {
     description: DataTypes.STRING,
     brand: DataTypes.STRING,
     region: DataTypes.STRING, 
-    yearBottled: DataTypes.INT,
-    quantity: DataTypes.INT,
+    yearBottled: DataTypes.INTEGER,
+    quantity: DataTypes.INTEGER,
     review: DataTypes.STRING
   }, {sequelize, modelName: 'wine'})
 
   return Wine
 }
+
