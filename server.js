@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const { join } = require('path')
 const app = express()
-const db = require('./config')
+const db = require('./connection')
 
 app.use(express.static(join(__dirname, 'public')))
 app.use(express.json())
