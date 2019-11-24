@@ -4,8 +4,8 @@ const sequelize = require('../connection')
 const Wines = require('./Wines.js')(sequelize, Model, DataTypes)
 const Users = require('./Users.js')(sequelize, Model, DataTypes)
 
-Wines.hasMany(Users)
-Users.belongsTo(Wines)
+Users.hasMany(Wines)
+Wines.belongsTo(Users)
 
 module.exports = {
   Wines,
