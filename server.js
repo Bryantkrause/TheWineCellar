@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: true }))
 app.set('views', join(__dirname, 'views'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
+ 
+
 
 require('./routes')(app)
 

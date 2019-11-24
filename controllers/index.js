@@ -1,3 +1,3 @@
 module.exports = {
-  songs: require('./wineController.js')
+  wine: require('./wineController.js')
 }
