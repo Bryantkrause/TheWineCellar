@@ -1,11 +1,11 @@
-const { Wines, Users } = require('../models')
+const { Wines } = require('../models')
 
 module.exports = app => {
-
+    // get all wines
   app.get('/wines', (req, res ) => {
     Wines.findAll()
-    .then(actors => {
-      res.json(actors)})
+    .then(wines => {
+      res.json(wines)})
       .catch(e => console.log(e))
     })
   
@@ -14,7 +14,7 @@ module.exports = app => {
     Wines.create(req.body)
     .then(() => {res.sendStatus(200)})
     .catch(e => console.log(e))})
-
+  
   }
 
   
