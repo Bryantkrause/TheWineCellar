@@ -11,7 +11,13 @@ module.exports = app => {
 
     app.post('/users', (req, res) => {
       Users.create(req.body)
-      .then(() => {res.sendStatus(200)})
-      .catch(e => console.log(e))})
+        .then(() => {
+          Users.findOne( {where: { 
+            username: req.body.username,
+            password: req.body.password } })
+            .then( user => res.json(user))
+        })
+        .catch(e => console.error(e))
+    })
   
   }
