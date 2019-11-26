@@ -8,6 +8,6 @@ Users.hasMany(Wines)
 Wines.belongsTo(Users)
 
 module.exports = {
-  Wines,
-  Users
+  Users,
+  Wines
 }
