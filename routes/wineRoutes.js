@@ -1,4 +1,5 @@
 const { Wines } = require('../models')
+const { wines } = require('../controllers')
 
 module.exports = app => {
   // Assigns wine to user
@@ -18,5 +19,7 @@ module.exports = app => {
   app.post('/wines', (req, res) => {
     Wines.create(req.body)
     .then(() => {res.sendStatus(200)})
-    .catch(e => console.log(e))})
+    .catch(e => console.error(e))})
   }
+
+  
