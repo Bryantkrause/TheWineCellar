@@ -2,7 +2,6 @@ const React = require('react')
 // const materialize = require('materialize-css')
 
 module.exports = props => {
-  console.log(props)
   return (
     <html lang="en">
     <head>
