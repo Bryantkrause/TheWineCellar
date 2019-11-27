@@ -4,9 +4,22 @@ const Layout = require('./Layout')
 module.exports = (props) => {
   return (
     <Layout>
-      <h1>Hello {props.name}}!</h1>
-      <button id="btn" className="button"> click my butt</button>
-  <p>{props.name}</p>
+
+      <h1 className="loginSpread">The Wine Cellar</h1>
+      <form className="loginSpread">
+        <label>
+          Username:
+          <br/>
+        <input type="text" name="name" />
+          <br/>
+          Password:
+          <br/>
+        <input type="text" name="name" />
+        </label>
+        <br/> 
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+
     </Layout>
   )
 }
