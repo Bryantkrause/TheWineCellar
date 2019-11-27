@@ -1,6 +1,7 @@
 const React = require('react')
 
 module.exports = props => {
+  console.log(props)
   return (
     <html lang="en">
     <head>
@@ -10,6 +11,7 @@ module.exports = props => {
     </head>
     <body>
       {props.children}
+      <script src="./app.js"></script>
     </body>
     </html>
   )
