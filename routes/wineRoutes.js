@@ -1,21 +1,18 @@
 const { songs } = require('../controllers')
 
 module.exports = app => {
-  // Create a new song
+  // Puts a new wine in the cellar(wine table)
   app.post('/', (req, res) => {
     
     })
-  })
 
-  // Toggle whether the song has been listened to
+  // Assigns wine to user
   app.put('/', (req, res) => {
     
     })
-  })
 
-  // Get all songs
+  // Shows all the wine collected in the cellar
   app.get('/', (req, res) => {
-    
+    res.send('')
     })
-  })
 }
