@@ -1,12 +1,10 @@
 const React = require('react')
 const Layout = require('./Layout')
 
-module.exports = () => {
+module.exports = (props) => {
   return (
     <Layout>
-<<<<<<< Updated upstream
-      <h1>Hello World!</h1>
-=======
+
       <h1 className="loginSpread">The Wine Cellar</h1>
       <form className="loginSpread">
         <label>
@@ -21,7 +19,9 @@ module.exports = () => {
         <br/> 
         <input id="submit" type="submit" value="Submit" />
       </form>
->>>>>>> Stashed changes
+
     </Layout>
   )
 }
+
+

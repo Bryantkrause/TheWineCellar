@@ -1,21 +1,20 @@
-const { songs } = require('../controllers')
+const { Wines } = require('../models')
+const { wines } = require('../controllers')
 
 module.exports = app => {
-  // Create a new song
-  app.post('/', (req, res) => {
-    
+    // get all wines
+  app.get('/wines', (req, res ) => {
+    Wines.findAll()
+    .then(wines => {
+      res.json(wines)})
+      .catch(e => console.log(e))
     })
-  })
+  
+   // Create a new wine
+  app.post('/wines', (req, res) => {
+    Wines.create(req.body)
+    .then(() => {res.sendStatus(200)})
+    .catch(e => console.error(e))})
+  }
 
-  // Toggle whether the song has been listened to
-  app.put('/', (req, res) => {
-    
-    })
-  })
-
-  // Get all songs
-  app.get('/', (req, res) => {
-    
-    })
-  })
-}
+  

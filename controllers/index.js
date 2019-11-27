@@ -1,3 +1,4 @@
 module.exports = {
-  songs: require('./wineController.js')
+  wines: require('./wineController.js'),
+  users: require('./userController.js')
 }
