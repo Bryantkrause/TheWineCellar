@@ -7,4 +7,8 @@ module.exports = app => {
   app.get('/cellar', (req, res) => {
     res.render('cellar', {name: "The Wine Cellar | Home"})
   })
+
+  app.get('/product', (req, res) => {
+    res.render('product', {name: "The Wine Cellar | Product"})
+  })
 }
