@@ -1,4 +1,5 @@
-document.getElementById('allWine').addEventListener('click', e => {
+document.getElementById('wineType').addEventListener('click', e => {
     e.preventDefault()
-    console.log('all wine')
-})
+    let wineValue = e.target.dataset.set
+    console.log(wineValue)
+    })
