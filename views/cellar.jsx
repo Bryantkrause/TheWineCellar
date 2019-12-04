@@ -93,6 +93,7 @@ module.exports = () => {
           </div>
         </div>
       </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script src="./cellar.js"></script>
     </Layout >
   )
