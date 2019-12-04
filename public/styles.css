@@ -7,11 +7,7 @@
     text-align: center;
 }
 
-.btn-add-floater {
-    margin-top: 1px;
-    margin-right: 1px;
-}
 
-.login {
-  background-image: url(./images/loginWine.jpg);
+.options {
+    margin-top: 12px;
 }

@@ -10,54 +10,90 @@ module.exports = () => {
           <div className="col s12">
             <nav>
               <div className="nav-wrapper">
-                <a className="brand-logo left">Wine Cellar</a>
+                <a id="submitBtn" className="brand-logo left">Wine Cellar</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                 </ul>
-                <a className="btn-floating btn-add-floater btn-large waves-effect waves-light red right"><i className="material-icons">add</i></a>
               </div>
             </nav>
           </div>
         </div>
       </nav>
       {/* Body */}
-      <div class="row">
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              White
-            </span>
+      <div className="row options">
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>Add Wine</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              Red
-            </span>
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div id="allWine" className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>All Wine</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              Rose
-            </span>
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>Red</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-            <span class="white-text">
-              Dessert
-            </span>
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>White</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col s12 m5">
-          <div class="card-panel teal">
-          <img src="./images/allWine.jpg" />
-            <span class="white-text">
-              Display All
-            </span>
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>Rose</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col s12 m7">
+          <div className="card horizontal">
+            <div className="card-image">
+              <img src="https://lorempixel.com/100/100/nature/6" />
+            </div>
+            <div className="card-stacked">
+              <div className="card-content">
+                <p>Dessert</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <script src="./cellar.js"></script>
     </Layout >
   )
 }
