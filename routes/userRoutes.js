@@ -34,7 +34,7 @@ module.exports = app => {
         .then(result => {
           if(!result){ // If username doesn't exist
             Users.create(req.body)
-              .then(() => {res.sendStatus(200)})
+              .then( r => { res.send(r.dataValues) })
               .catch(e => console.error(e))
           } else { // If username already exists
             res.send('User already exists')

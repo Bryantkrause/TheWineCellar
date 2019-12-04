@@ -4,23 +4,20 @@ let person;
 
 const addUser = person => {
     axios.post('./users', person)
-    .then(res => {
-      console.log(person)
+    .then( ({ data }) => {
+      //console.log(data)
+      localStorage.setItem('userId', data.id)
+      localStorage.setItem('username', data.username)
       })
-
 }
 
 document.getElementById('submitBtn').addEventListener('click', e => {
     e.preventDefault()
     console.log('click')
 
-
-    user = document.getElementById('usernameCatch').value
-    pass = document.getElementById('passwordCatch').value
-
     let person = {
-        username: user,
-        password: pass
+        username: document.getElementById('usernameCatch').value,
+        password: document.getElementById('passwordCatch').value
     }
     addUser(person)
 
