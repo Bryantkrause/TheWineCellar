@@ -18,6 +18,7 @@ module.exports = (props) => {
         <br/> 
         <input id="submitBtn" type="submit" value="Submit" />
       </form>
+      <script src="./app.js"></script>
     </Layout>
   )
 }
