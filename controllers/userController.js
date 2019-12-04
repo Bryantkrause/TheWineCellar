@@ -8,10 +8,10 @@ module.exports = {
       Users.findOne( {where: { 
         username: username } })
         .then( result => { 
+          console.log(result)
+          result ? resolve(true) : resolve(false) 
           if ( result === '' || result === null || result === "null"){
             reject(new Error)
-          } else {
-            result ? resolve(true) : resolve(false) 
           }
         })
         .catch( e => reject(e))
