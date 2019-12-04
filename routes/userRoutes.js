@@ -16,6 +16,17 @@ module.exports = app => {
       .then( username => res.send(username))
     })
 
+  // GET for Log in
+  app.get(`/users/:username/:password`, (req, res) => {
+    Users.findOne({
+      where: {
+        username: req.params.username,
+        password: req.params.password
+      }
+    })
+    .then (result => result ? res.send(true) : res.send(false))
+  })
+
     // Post User to users table in DB
     app.post('/users', (req, res) => {
       // Check if username already exist in the table
