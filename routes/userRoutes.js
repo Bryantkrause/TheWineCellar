@@ -24,7 +24,7 @@ module.exports = app => {
         password: req.params.password
       }
     })
-    .then (result => result ? res.send(true) : res.send(false))
+    .then (result => result ? res.send(result) : res.send(false))
   })
 
     // Post User to users table in DB

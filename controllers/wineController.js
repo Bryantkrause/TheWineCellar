@@ -15,9 +15,15 @@ module.exports = {
           yearBottled: wine.yearBottled
         } // end where
       })
-        .then( result => { result ? resolve(true) : reject(new Error('no user found')) })
+        .then( result => { 
+          if ( result === '' || result === null || result === 'null'){
+            reject(new Error)
+          } else {
+            result ? resolve(true) : resolve(false)
+          }
+        })
         .catch( e => reject(e))
     })
     return response
-  }
+  } //end checkWine
 }
