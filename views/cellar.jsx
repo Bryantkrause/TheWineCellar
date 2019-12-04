@@ -10,7 +10,7 @@ module.exports = () => {
           <div className="col s12">
             <nav>
               <div className="nav-wrapper">
-                <a id="submitBtn" className="brand-logo left">Wine Cellar</a>
+                <a className="brand-logo left">Wine Cellar</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                 </ul>
               </div>
@@ -23,7 +23,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" data-set="addWine" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -34,8 +34,8 @@ module.exports = () => {
         </div>
         <div className="col s12 m7">
           <div className="card horizontal">
-            <div id="allWine" className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+            <div className="card-image">
+              <img id="wineType" datatype="allWin" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -47,7 +47,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="whiteWine" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -59,7 +59,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="whiteWine" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -71,7 +71,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="roseWine" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -83,7 +83,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="dessertWine" src="https://lorempixel.com/100/100/nature/6" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
