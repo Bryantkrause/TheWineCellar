@@ -15,7 +15,7 @@ module.exports = app => {
       .catch(e => console.log(e))
     })
   
-   // Create a new wine
+   // Add a wine to the database
   app.post('/wines', (req, res) => {
     Wines.create(req.body)
     .then(() => {res.sendStatus(200)})
