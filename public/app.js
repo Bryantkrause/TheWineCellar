@@ -1,11 +1,5 @@
-<<<<<<< Updated upstream
-document.getElementById('btn').addEventListener('click', e => {
-
-})
-=======
 let user;
 let pass;
->>>>>>> Stashed changes
 
 const testConsole = function() {
     console.log(user)
