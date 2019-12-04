@@ -7,7 +7,12 @@ module.exports = {
       console.log(`checkUser user is ${username}`)
       Users.findOne( {where: { 
         username: username } })
-        .then( result => { result ? resolve(true) : reject(new Error('no user found')) })
+        .then( result => { 
+          result ? resolve(true) : resolve(false) 
+          if ( result === ''){
+            reject(new Error)
+          }
+        })
         .catch( e => reject(e))
     })
     return response
