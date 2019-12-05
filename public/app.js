@@ -11,16 +11,29 @@ const addUser = person => {
       })
 }
 
+const login = (user, pass) => {
+  axios.get(`/users/${user}/${pass}`)
+    .then(response => {
+      console.log(response)
+      if (response.data) {
+        console.log('pair matches')
+         window.location.pathname = `/cellar`
+      } else {
+        console.log('pair doesnt match')
+        window.location.pathname = `/`
+      }
+    })
+}
+
 document.getElementById('submitBtn').addEventListener('click', e => {
-    e.preventDefault()
-    console.log('click')
+  e.preventDefault()
+  console.log('click')
+
 
     let person = {
         username: document.getElementById('usernameCatch').value,
         password: document.getElementById('passwordCatch').value
     }
     addUser(person)
-
-    
 })
 
