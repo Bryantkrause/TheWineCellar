@@ -3,11 +3,12 @@ let pass;
 let person;
 
 const addUser = person => {
-  axios.post('./users', person)
-    .then(res => {
-      console.log(person)
-    })
-
+    axios.post('./users', person)
+    .then( ({ data }) => {
+      //console.log(data)
+      localStorage.setItem('userId', data.id)
+      localStorage.setItem('username', data.username)
+      })
 }
 
 const login = (user, pass) => {
@@ -29,16 +30,10 @@ document.getElementById('submitBtn').addEventListener('click', e => {
   console.log('click')
 
 
-  user = document.getElementById('usernameCatch').value
-  pass = document.getElementById('passwordCatch').value
-
-  let person = {
-    username: user,
-    password: pass
-  }
-  addUser(person)
-
-  login(user, pass)
-
+    let person = {
+        username: document.getElementById('usernameCatch').value,
+        password: document.getElementById('passwordCatch').value
+    }
+    addUser(person)
 })
 
