@@ -2,7 +2,7 @@ module.exports = (sequelize, Model, DataTypes) => {
   class Wine extends Model { }
 
   Wine.init({
-    types: DataTypes.STRING,
+    type: DataTypes.STRING,
     name: DataTypes.STRING,
     brand: DataTypes.STRING, 
     yearBottled: DataTypes.INTEGER,
