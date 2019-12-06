@@ -23,7 +23,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="addWine" data-set="addWine" data-target="mAddWine" class="modal-trigger" src="./images/allWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -34,8 +34,9 @@ module.exports = () => {
         </div>
         <div className="col s12 m7">
           <div className="card horizontal">
-            <div id="allWine" className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+
+            <div className="card-image">
+              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -47,7 +48,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="whiteWine" data-target="mRedWine" class="modal-trigger" src="./images/redWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -59,7 +60,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="whiteWine" data-target="mWhiteWine" class="modal-trigger" src="./images/whiteWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -71,11 +72,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="roseWine" data-target="mRoseWine" class="modal-trigger" src="./images/roseWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Rose</p>
+                <p>Rosé</p>
               </div>
             </div>
           </div>
@@ -83,7 +84,7 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/100/nature/6" />
+              <img id="wineType" datatype="dessertWine" data-target="mDessertWine" class="modal-trigger" src="./images/dessertWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -92,6 +93,69 @@ module.exports = () => {
             </div>
           </div>
         </div>
+
+
+        {/* Add wine modal */}
+        <div id="mAddWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Add Wine to your Cellar</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* Display all wine */}
+        <div id="mAllWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>All Wine!</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* Display red wine */}
+        <div id="mRedWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Red Wine!</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* Display white wine */}
+        <div id="mWhiteWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>White Wine!</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* Display rosé wine */}
+        <div id="mRoseWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Rosé Wine!</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* display Dessert Wine */}
+        <div id="mDessertWine" class="modal modal-fixed-footer">
+          <div class="modal-content">
+            <h4>Dessert Wine!</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+        {/* End Div */}
       </div>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script src="./cellar.js"></script>
