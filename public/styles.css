@@ -17,8 +17,11 @@
   text-align: center;
 }
   
-.loginField{
+.loginField {
   background: rgba(129, 122, 122, 0.6);
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .options {
