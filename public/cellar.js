@@ -1,5 +1,3 @@
-// import { connect } from "http2"
-
 document.getElementById('wineType').addEventListener('click', e => {
     e.preventDefault()
     let wineValue = e.target.dataset.set

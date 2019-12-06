@@ -10,7 +10,7 @@ module.exports = () => {
           <div className="col s12">
             <nav>
               <div className="nav-wrapper">
-                <a className="brand-logo left">Wine Cellar</a>
+                <a id="submitBtn" className="brand-logo left">Wine Cellar</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                 </ul>
               </div>
@@ -34,8 +34,9 @@ module.exports = () => {
         </div>
         <div className="col s12 m7">
           <div className="card horizontal">
+
             <div className="card-image">
-              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" />
+              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" /
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -156,6 +157,7 @@ module.exports = () => {
         </div>
         {/* End Div */}
       </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <script src="./cellar.js"></script>
     </Layout >
   )
