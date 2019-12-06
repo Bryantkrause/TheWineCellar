@@ -1,4 +1,11 @@
-document.getElementById('allWine').addEventListener('click', e => {
+document.getElementById('wineType').addEventListener('click', e => {
     e.preventDefault()
-    console.log('all wine')
+    let wineValue = e.target.dataset.set
+    console.log(wineValue)
+    })
+
+// Add wine Modal
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.modal');
+    let instance = M.Modal.init(elems)
 })
