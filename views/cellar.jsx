@@ -121,7 +121,7 @@ module.exports = () => {
               {/* Quantity */}
               <label className="active">Quantity</label>
               <input id="quantity" type="text" className="validate" />
-              <a href="#!" className="modal-close waves-effect waves-green btn">Submit!</a>
+              <a href="#!" id="addMyWine" className="modal-close waves-effect waves-green btn">Submit!</a>
             </form>
           </div>
           <div className="modal-footer">
