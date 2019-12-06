@@ -36,7 +36,7 @@ module.exports = () => {
           <div className="card horizontal">
 
             <div className="card-image">
-              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" /
+              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
