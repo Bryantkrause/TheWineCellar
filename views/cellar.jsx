@@ -27,7 +27,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Add Wine</p>
+                <p className="center-align ctitle">Add Wine</p>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>All Wine</p>
+                <p class="center-align ctitle">All Wine</p>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Red</p>
+                <p class="center-align ctitle">Red</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>White</p>
+                <p class="center-align ctitle">White</p>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Rosé</p>
+                <p class="center-align ctitle">Rosé</p>
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ module.exports = () => {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Dessert</p>
+                <p class="center-align ctitle">Dessert</p>
               </div>
             </div>
           </div>
@@ -97,17 +97,41 @@ module.exports = () => {
         {/* Add wine modal */}
         <div id="mAddWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>Add Wine to your Cellar</h5>
-            <p>A bunch of text</p>
+            <h5 class="center-align">Add Wine to your Cellar</h5>
+            {/* form Start */}
+            <form id="wineInfo">
+              {/* Type of Wine */}
+              <label>Type</label>
+              <select id="type" class="browser-default">
+                <option value="Red">Red Wine</option>
+                <option value="White">White Wine</option>
+                <option value="Rosé">Rosé</option>
+                <option value="Dessert">Dessert</option>
+              </select>
+              {/* Name of Wine */}
+              <label class="active" for="name">Name</label>
+              <input value="" id="name" type="text" class="validate" />
+              {/* Brand */}
+              <label class="active" for="brand">Brand</label>
+              <input value="" id="brand" type="text" class="validate" />
+              {/* Year */}
+              <label class="active" for="yearBottled">Year Bottled</label>
+              <input value="" id="yearBottled" type="text" class="validate" />
+              {/* Quantity */}
+              <label class="active" for="quantity">Quantity</label>
+              <input value="" id="quantity" type="text" class="validate" />
+              <a href="#!" class="modal-close waves-effect waves-green btn">Submit!</a>
+            </form>
           </div>
           <div class="modal-footer">
+            
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* Display all wine */}
         <div id="mAllWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>All Wine!</h5>
+            <h5 class="center-align">All Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -117,7 +141,7 @@ module.exports = () => {
         {/* Display red wine */}
         <div id="mRedWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>Red Wine!</h5>
+            <h5 class="center-align">Red Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -127,7 +151,7 @@ module.exports = () => {
         {/* Display white wine */}
         <div id="mWhiteWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>White Wine!</h5>
+            <h5 class="center-align">White Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -137,7 +161,7 @@ module.exports = () => {
         {/* Display rosé wine */}
         <div id="mRoseWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>Rosé Wine!</h5>
+            <h5 class="center-align">Rosé Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -147,8 +171,8 @@ module.exports = () => {
         {/* display Dessert Wine */}
         <div id="mDessertWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h5>Dessert Wine!</h5>
-            <p>A bunch of text</p>
+            <h5 class="center-align">Dessert Wine!</h5>
+            <p>text text text</p>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>

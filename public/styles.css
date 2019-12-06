@@ -16,8 +16,6 @@
  
     border-radius: 0 0 2px 2px;
    
-    background-color: #01579b;
-   
     padding: 4px 6px;
    
     height: 60px;
@@ -29,6 +27,14 @@
   }
 
   .modal {
-      width: 100%;
+      width: 95%;
 
+  }
+
+  .ctitle {
+      font-size: 25px;
+  }
+
+  #wineInfo {
+      margin-top: 25px;
   }
