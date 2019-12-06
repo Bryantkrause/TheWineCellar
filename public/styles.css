@@ -3,11 +3,31 @@
 }
 
 .loginSpread {
-    margin-top: 100px;
+    margin-top: 190px;
     text-align: center;
+    /* color: white; */
+  }
+  .loginText {
+    font-family: cursive;
+    color: white;
+    /* font-size: 50px; */
+    margin-top: 0px;   
+    padding-top: 140px; 
+    text-align: center;
+  }
+  
+  .loginField{
+    background: rgba(129, 122, 122, 0.6);
 }
 
 
 .options {
     margin-top: 12px;
+}
+
+.loginBackground {
+  background-image: url(images/loginWine.jpg);
+  height: 812px;
+  width: 380;
+
 }
