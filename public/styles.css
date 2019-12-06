@@ -11,3 +11,24 @@
 .options {
     margin-top: 12px;
 }
+
+.modal .modal-footer {
+ 
+    border-radius: 0 0 2px 2px;
+   
+    background-color: #01579b;
+   
+    padding: 4px 6px;
+   
+    height: 60px;
+   
+    width: 100%;
+   
+    text-align: right;
+   
+  }
+
+  .modal {
+      width: 100%;
+
+  }
