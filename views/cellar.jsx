@@ -34,7 +34,6 @@ module.exports = () => {
         </div>
         <div className="col s12 m7">
           <div className="card horizontal">
-
             <div className="card-image">
               <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" />
             </div>
@@ -98,7 +97,7 @@ module.exports = () => {
         {/* Add wine modal */}
         <div id="mAddWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>Add Wine to your Cellar</h4>
+            <h5>Add Wine to your Cellar</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -108,7 +107,7 @@ module.exports = () => {
         {/* Display all wine */}
         <div id="mAllWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>All Wine!</h4>
+            <h5>All Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -118,7 +117,7 @@ module.exports = () => {
         {/* Display red wine */}
         <div id="mRedWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>Red Wine!</h4>
+            <h5>Red Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -128,7 +127,7 @@ module.exports = () => {
         {/* Display white wine */}
         <div id="mWhiteWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>White Wine!</h4>
+            <h5>White Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -138,7 +137,7 @@ module.exports = () => {
         {/* Display rosé wine */}
         <div id="mRoseWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>Rosé Wine!</h4>
+            <h5>Rosé Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
@@ -148,7 +147,7 @@ module.exports = () => {
         {/* display Dessert Wine */}
         <div id="mDessertWine" class="modal modal-fixed-footer">
           <div class="modal-content">
-            <h4>Dessert Wine!</h4>
+            <h5>Dessert Wine!</h5>
             <p>A bunch of text</p>
           </div>
           <div class="modal-footer">
