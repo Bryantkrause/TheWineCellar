@@ -1,4 +1,4 @@
-const { Wines } = require('../models')
+const { Wines, Users } = require('../models')
 const { wines } = require('../controllers')
 
 module.exports = app => {
@@ -12,7 +12,7 @@ module.exports = app => {
     
     // get all wines for user
     app.get('/wines/:id', (req, res ) => {
-      Wines.findAll({where: {id: parseInt(req.params.id)}})
+      Wines.findAll({where: {userId: parseInt(req.params.id)}})
       .then(wines => {
         res.json(wines)})
         .catch(e => console.log(e))
@@ -23,6 +23,6 @@ module.exports = app => {
     Wines.create(req.body)
     .then(() => {res.sendStatus(200)})
     .catch(e => console.error(e))})
-  }
+}
 
   
