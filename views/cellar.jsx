@@ -124,7 +124,7 @@ module.exports = () => {
             </form>
           </div>
           <div class="modal-footer">
-            
+
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
@@ -132,7 +132,16 @@ module.exports = () => {
         <div id="mAllWine" class="modal modal-fixed-footer">
           <div class="modal-content">
             <h5 class="center-align">All Wine!</h5>
-            <p>A bunch of text</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Year</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -142,7 +151,16 @@ module.exports = () => {
         <div id="mRedWine" class="modal modal-fixed-footer">
           <div class="modal-content">
             <h5 class="center-align">Red Wine!</h5>
-            <p>A bunch of text</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Year</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -152,7 +170,16 @@ module.exports = () => {
         <div id="mWhiteWine" class="modal modal-fixed-footer">
           <div class="modal-content">
             <h5 class="center-align">White Wine!</h5>
-            <p>A bunch of text</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Year</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -162,7 +189,16 @@ module.exports = () => {
         <div id="mRoseWine" class="modal modal-fixed-footer">
           <div class="modal-content">
             <h5 class="center-align">Rosé Wine!</h5>
-            <p>A bunch of text</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Year</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -172,7 +208,16 @@ module.exports = () => {
         <div id="mDessertWine" class="modal modal-fixed-footer">
           <div class="modal-content">
             <h5 class="center-align">Dessert Wine!</h5>
-            <p>text text text</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Year</th>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+            </table>
           </div>
           <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
