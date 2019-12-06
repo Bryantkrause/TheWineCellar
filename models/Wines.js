@@ -4,12 +4,9 @@ module.exports = (sequelize, Model, DataTypes) => {
   Wine.init({
     types: DataTypes.STRING,
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
-    brand: DataTypes.STRING,
-    region: DataTypes.STRING, 
+    brand: DataTypes.STRING, 
     yearBottled: DataTypes.INTEGER,
-    quantity: DataTypes.INTEGER,
-    review: DataTypes.STRING
+    quantity: DataTypes.INTEGER
   }, {sequelize, modelName: 'wine'})
 
   return Wine
