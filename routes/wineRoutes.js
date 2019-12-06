@@ -2,13 +2,21 @@ const { Wines } = require('../models')
 const { wines } = require('../controllers')
 
 module.exports = app => {
-    // get all wines
-  app.get('/wines', (req, res ) => {
-    Wines.findAll()
+    // get one type of wine
+  app.get('/wines/:id/:type', (req, res ) => {
+    Wines.findAll({where: {id: parseInt(req.params.id)}},{where: {type: parseInt(req.params.type)}})
     .then(wines => {
       res.json(wines)})
       .catch(e => console.log(e))
     })
+    
+    // get all wines for user
+    app.get('/wines/:id', (req, res ) => {
+      Wines.findAll({where: {id: parseInt(req.params.id)}})
+      .then(wines => {
+        res.json(wines)})
+        .catch(e => console.log(e))
+      })
   
    // Add a wine to the database
   app.post('/wines', (req, res) => {
