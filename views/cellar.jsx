@@ -18,12 +18,13 @@ module.exports = () => {
           </div>
         </div>
       </nav>
+
       {/* Body */}
       <div className="row options">
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="addWine" data-set="addWine" data-target="mAddWine" class="modal-trigger" src="./images/allWine.jpg" />
+              <img id="addWine" data-set="addWine" data-target="mAddWine" className="modal-trigger" src="./images/addWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
@@ -35,11 +36,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="wineType" datatype="allWin" data-target="mAllWine" class="modal-trigger" src="./images/allWine.jpg" />
+              <img id="wineType" datatype="allWin" data-target="mAllWine" className="modal-trigger" src="./images/allWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p class="center-align ctitle">All Wine</p>
+                <p className="center-align ctitle">All Wine</p>
               </div>
             </div>
           </div>
@@ -47,11 +48,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="wineType" datatype="whiteWine" data-target="mRedWine" class="modal-trigger" src="./images/redWine.jpg" />
+              <img id="wineType" datatype="whiteWine" data-target="mRedWine" className="modal-trigger" src="./images/redWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p class="center-align ctitle">Red</p>
+                <p className="center-align ctitle">Red</p>
               </div>
             </div>
           </div>
@@ -59,11 +60,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="wineType" datatype="whiteWine" data-target="mWhiteWine" class="modal-trigger" src="./images/whiteWine.jpg" />
+              <img id="wineType" datatype="whiteWine" data-target="mWhiteWine" className="modal-trigger" src="./images/whiteWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p class="center-align ctitle">White</p>
+                <p className="center-align ctitle">White</p>
               </div>
             </div>
           </div>
@@ -71,11 +72,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="wineType" datatype="roseWine" data-target="mRoseWine" class="modal-trigger" src="./images/roseWine.jpg" />
+              <img id="wineType" datatype="roseWine" data-target="mRoseWine" className="modal-trigger" src="./images/roseWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p class="center-align ctitle">Rosé</p>
+                <p className="center-align ctitle">Rosé</p>
               </div>
             </div>
           </div>
@@ -83,11 +84,11 @@ module.exports = () => {
         <div className="col s12 m7">
           <div className="card horizontal">
             <div className="card-image">
-              <img id="wineType" datatype="dessertWine" data-target="mDessertWine" class="modal-trigger" src="./images/dessertWine.jpg" />
+              <img id="wineType" datatype="dessertWine" data-target="mDessertWine" className="modal-trigger" src="./images/dessertWine.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p class="center-align ctitle">Dessert</p>
+                <p className="center-align ctitle">Dessert</p>
               </div>
             </div>
           </div>
@@ -95,14 +96,14 @@ module.exports = () => {
 
 
         {/* Add wine modal */}
-        <div id="mAddWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">Add Wine to your Cellar</h5>
+        <div id="mAddWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">Add Wine to your Cellar</h5>
             {/* form Start */}
             <form id="wineInfo">
               {/* Type of Wine */}
               <label>Type</label>
-              <select id="type" class="browser-default">
+              <select id="type" className="browser-default">
                 <option value="Red">Red Wine</option>
                 <option value="White">White Wine</option>
                 <option value="Rosé">Rosé</option>
