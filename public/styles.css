@@ -1,40 +1,33 @@
 #submit {
-    color: red;
+  color: red;
 }
 
 .loginSpread {
-    margin-top: 100px;
-    text-align: center;
+  margin - top: 190px;
+  text - align: center;
+  /* color: white; */
+}
+  .loginText {
+  font - family: cursive;
+  color: white;
+  /* font-size: 50px; */
+  margin - top: 0px;
+  padding - top: 140px;
+  text - align: center;
+}
+  
+  .loginField{
+  background: rgba(129, 122, 122, 0.6);
 }
 
 
 .options {
-    margin-top: 12px;
+  margin - top: 12px;
 }
 
-.modal .modal-footer {
- 
-    border-radius: 0 0 2px 2px;
-   
-    padding: 4px 6px;
-   
-    height: 60px;
-   
-    width: 100%;
-   
-    text-align: right;
-   
-  }
+.loginBackground {
+  background - image: url(images / loginWine.jpg);
+  height: 812px;
+  width: 380;
 
-  .modal {
-      width: 95%;
-
-  }
-
-  .ctitle {
-      font-size: 25px;
-  }
-
-  #wineInfo {
-      margin-top: 25px;
-  }
+}
