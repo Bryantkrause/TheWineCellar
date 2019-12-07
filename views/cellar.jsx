@@ -158,7 +158,6 @@ module.exports = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Type</th>
                   <th>Year</th>
                   <th>Name</th>
                   <th>Quantity</th>
@@ -178,7 +177,6 @@ module.exports = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Type</th>
                   <th>Year</th>
                   <th>Name</th>
                   <th>Quantity</th>
@@ -198,7 +196,6 @@ module.exports = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Type</th>
                   <th>Year</th>
                   <th>Name</th>
                   <th>Quantity</th>
@@ -218,7 +215,6 @@ module.exports = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Type</th>
                   <th>Year</th>
                   <th>Name</th>
                   <th>Quantity</th>
