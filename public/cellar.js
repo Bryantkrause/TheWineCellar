@@ -78,6 +78,10 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   }
   console.log(wines)
   addWine(wines)
+  document.getElementById('name').value = ''
+  document.getElementById('brand').value = ''
+  document.getElementById('yearBottled').value = ''
+  document.getElementById('quantity').value = ''
 })
 
 // get all wines from user storage
