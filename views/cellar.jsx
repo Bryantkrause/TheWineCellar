@@ -110,29 +110,28 @@ module.exports = () => {
                 <option value="Dessert">Dessert</option>
               </select>
               {/* Name of Wine */}
-              <label class="active" for="name">Name</label>
-              <input value="" id="name" type="text" class="validate" />
+              <label className="active">Name</label>
+              <input id="name" type="text" className="validate" />
               {/* Brand */}
-              <label class="active" for="brand">Brand</label>
-              <input value="" id="brand" type="text" class="validate" />
+              <label className="active">Brand</label>
+              <input id="brand" type="text" className="validate" />
               {/* Year */}
-              <label class="active" for="yearBottled">Year Bottled</label>
-              <input value="" id="yearBottled" type="text" class="validate" />
+              <label className="active">Year Bottled</label>
+              <input id="yearBottled" type="text" className="validate" />
               {/* Quantity */}
-              <label class="active" for="quantity">Quantity</label>
-              <input value="" id="quantity" type="text" class="validate" />
-              <a href="#!" class="modal-close waves-effect waves-green btn">Submit!</a>
+              <label className="active">Quantity</label>
+              <input id="quantity" type="text" className="validate" />
+              <a href="#!" id="addMyWine" className="modal-close waves-effect waves-green btn">Submit!</a>
             </form>
           </div>
-          <div class="modal-footer">
-
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* Display all wine */}
-        <div id="mAllWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">All Wine!</h5>
+        <div id="mAllWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">All Wine!</h5>
             <table>
               <thead>
                 <tr>
@@ -144,14 +143,14 @@ module.exports = () => {
               </thead>
             </table>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* Display red wine */}
-        <div id="mRedWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">Red Wine!</h5>
+        <div id="mRedWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">Red Wine!</h5>
             <table>
               <thead>
                 <tr>
@@ -163,14 +162,14 @@ module.exports = () => {
               </thead>
             </table>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* Display white wine */}
-        <div id="mWhiteWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">White Wine!</h5>
+        <div id="mWhiteWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">White Wine!</h5>
             <table>
               <thead>
                 <tr>
@@ -182,14 +181,14 @@ module.exports = () => {
               </thead>
             </table>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* Display rosé wine */}
-        <div id="mRoseWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">Rosé Wine!</h5>
+        <div id="mRoseWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">Rosé Wine!</h5>
             <table>
               <thead>
                 <tr>
@@ -201,14 +200,14 @@ module.exports = () => {
               </thead>
             </table>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* display Dessert Wine */}
-        <div id="mDessertWine" class="modal modal-fixed-footer">
-          <div class="modal-content">
-            <h5 class="center-align">Dessert Wine!</h5>
+        <div id="mDessertWine" className="modal modal-fixed-footer">
+          <div className="modal-content">
+            <h5 className="center-align">Dessert Wine!</h5>
             <table>
               <thead>
                 <tr>
@@ -220,8 +219,8 @@ module.exports = () => {
               </thead>
             </table>
           </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+          <div className="modal-footer">
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
         {/* End Div */}
