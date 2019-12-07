@@ -27,6 +27,21 @@ module.exports = app => {
     .then(() => {res.sendStatus(200)})
     .catch(e => console.error(e))
   })
+
+  // PUT for updating the quantity of a wine
+  app.put('/wines/:id/:type/:name/:brand/:quantity', (req, res) => {
+    Wines.findOne({
+      where: {
+        userId: parseInt(req.params.id),
+        type: req.params.type,
+        name: req.params.name,
+        brand: req.params.brand
+      }
+    })
+    .then( wine => wine.update({ quantity: req.params.quantity})) // update the quantity column of the row
+    .then( update => res.send(update.dataValues)) // return the updated row as a promise
+    .catch(e => console.error(e))
+  }) // end PUT for update the quantity of the wine
 } // end module.exports
 
   
