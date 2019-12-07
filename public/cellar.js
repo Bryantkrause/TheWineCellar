@@ -1,3 +1,22 @@
+let id;
+let type;
+
+// Get one type of wine
+const oneWine = type => {
+  axios.get(`/wines/${id}/${type}`)
+  .then(response => {
+
+  })
+}
+
+// Get all wine
+const alllWine = id => {
+  axios.get(`/wines/${id}`)
+    .then(response => {
+
+    })
+}
+
 // Gets wine type
 document.getElementById('wineType').addEventListener('click', e => {
     e.preventDefault()
