@@ -2,19 +2,19 @@ const { Users, Wines } = require('../models')
 const { users } = require('../controllers')
 
 module.exports = app => {
-  // get all users
+  // GET all users
   app.get('/users', (req, res ) => {
     Users.findAll({include: Wines})
-    .then(users => {
-      res.json(users)})
-      .catch(e => console.log(e))
-    })
+    .then(users => res.json(users))
+    .catch(e => console.log(e))
+  }) // End GET all Users
 
-  // Get one user
+  // GET one user
   app.get('/users/:username', (req, res) => {
     Users.findOne( {where: { username: req.params.username } })
       .then( username => res.send(username))
-    })
+      .catch( e => console.error(e))
+  }) // End GET one user
 
   // GET for Log in
   app.get(`/users/:username/:password`, (req, res) => {
@@ -25,21 +25,21 @@ module.exports = app => {
       }
     })
     .then (result => result ? res.send(result) : res.send(false))
-  })
+  }) // End GET for log in
 
-    // Post User to users table in DB
-    app.post('/users', (req, res) => {
-      // Check if username already exist in the table
-      users.checkUser(req.body.username)
-        .then(result => {
-          if(!result){ // If username doesn't exist
-            Users.create(req.body)
-              .then( r => { res.send(r.dataValues) })
-              .catch(e => console.error(e))
-          } else { // If username already exists
-            res.send('User already exists')
-          }
-        }) // end .then
-        .catch(e => console.error(e))
-    })
-  }
+  // POST for signing up
+  app.post('/users', (req, res) => {
+    // Check if username already exist in the table
+    users.checkUser(req.body.username)
+      .then(result => {
+        if(!result){ // If username doesn't exist
+          Users.create(req.body)
+            .then( r => { res.send(r.dataValues) })
+            .catch(e => console.error(e))
+        } else { // If username already exists
+          res.send('User already exists')
+        }
+      }) // end .then
+      .catch(e => console.error(e))
+  }) // End POST for signing up
+} // end module.exports
