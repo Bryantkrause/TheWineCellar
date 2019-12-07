@@ -50,6 +50,9 @@ module.exports = app => {
     .then( update => res.send(update.dataValues)) // return the updated row as a promise
     .catch(e => console.error(e))
   }) // end PUT for update the quantity of the wine
+
+  // DELETE 
+
 } // end module.exports
 
   
