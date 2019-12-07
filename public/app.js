@@ -2,6 +2,11 @@ let user;
 let pass;
 let person;
 
+// Add login Modal
+document.addEventListener('DOMContentLoaded', function () {
+  let elems = document.querySelectorAll('.modal');
+  let instance = M.Modal.init(elems)
+})
 
 const addUser = person => {
   axios.post('./users', person)
@@ -23,20 +28,29 @@ const login = (user, pass) => {
         window.location.pathname = `/cellar`
       } else {
         console.log('pair doesnt match')
-        // window.location.pathname = `/`
 
       }
     })
 }
 
-document.getElementById('submitBtn').addEventListener('click', e => {
+document.getElementById('registerBtn').addEventListener('click', e => {
   e.preventDefault()
-  console.log('click')
+  console.log('register button clicked')
 
   let person = {
     username: document.getElementById('usernameCatch').value,
     password: document.getElementById('passwordCatch').value
   }
   addUser(person)
+})
+
+document.getElementById('loginBtn').addEventListener('click', e => {
+  e.preventDefault()
+  console.log('login button clicked')
+
+  user = document.getElementById('usernameCatch').value,
+    pass = document.getElementById('passwordCatch').value
+
+  login(user, pass)
 })
 

@@ -8,6 +8,14 @@
   /* color: white; */
 }
 
+.loginSpace{
+  margin-bottom: 2px;
+}
+
+.inputText {
+  color: white
+}
+
 .loginText {
   font-family: cursive;
   color: white;
@@ -18,12 +26,15 @@
 }
   
 .loginField {
-  background: rgba(129, 122, 122, 0.6);
+  background: rgba(129, 122, 122, .9);
   margin: 2px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
+.loginButton {
+  margin: 4px
+}
 .options {
   margin-top: 12px;
 }
