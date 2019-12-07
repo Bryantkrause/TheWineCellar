@@ -15,10 +15,15 @@ module.exports = {
         } // end where
       })
         .then( result => { 
+          console.log('result is...')
+          console.log(result)
           if ( result === '' || result === null || result === 'null'){
-            reject(new Error)
-          } else {
+            Wines.create(wine)
+           //reject(new Error)
+          } else if (result) {
             result ? resolve(true) : resolve(false)
+          } else {
+            reject(new Error)
           }
         })
         .catch( e => reject(e))
