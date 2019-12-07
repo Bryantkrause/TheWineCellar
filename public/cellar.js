@@ -1,18 +1,9 @@
 let id = localStorage.getItem('userId')
 let type = ''
 
-// Get one type of wine
-const oneWine = type => {
-  axios.get(`/wines/${id}/${type}`)
-    .then(response => {
-
-    })
-}
-
 // Get all wine
 const alllWine = (id, type, typeBody) => {
   if (type === 'allWine') {
-    console.log('allWine')
     axios.get(`/wines/${parseInt(id)}`)
       .then(({ data }) => {
         data.forEach(wine => {
@@ -31,6 +22,7 @@ const alllWine = (id, type, typeBody) => {
         })
       })
   } else {
+    // Get specific wine
     axios.get(`/wines/${parseInt(id)}/${type}`)
       .then(({ data }) => {
         data.forEach(wine => {
@@ -51,11 +43,9 @@ const alllWine = (id, type, typeBody) => {
   }
 }
 
-// 
+// listens for click to decide get method
 document.addEventListener('click', e => {
   if (e.target.id === 'allWine' || e.target.id === 'red' || e.target.id === 'white' || e.target.id === 'rose' || e.target.id === 'dessert') {
-    console.log(e.target.id)
-    console.log(e.target.dataset.body)
     document.getElementById(e.target.dataset.body).innerHTML = ''
     alllWine(id, e.target.id, e.target.dataset.body)
   }
@@ -68,12 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 let wine;
-// add wine to user storage
+// Add wine to user storage
 const addWine = wine => {
   axios.post('./wines', wine)
     .then(() => {
     })
 }
+
 // retrieve wine based on user selection
 document.getElementById('addMyWine').addEventListener('click', e => {
   e.preventDefault()
@@ -89,7 +80,6 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   addWine(wines)
 })
 
-
 // get all wines from user storage
 const getAllWine = wine => {
   axios.get('./wines/:id', wine)
@@ -97,14 +87,14 @@ const getAllWine = wine => {
     })
 }
 
-// display selected wine based on user criteria
+// Display selected wine based on user criteria
 document.getElementById('mAllWine').addEventListener('click', e => {
   e.preventDefault()
   getAllWine()
 
 })
 
-// get one wine from user storage
+// Get one wine from user storage
 const getWine = wine => {
   axios.get('./wines/:id/:type', wine)
     .then(() => {

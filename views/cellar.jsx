@@ -123,7 +123,7 @@ module.exports = () => {
               <label className="active">Quantity</label>
               {/* Button */}
               <p>
-              <a href="#!" id="addMyWine" className="modal-close waves-effect waves-green btn">Submit!</a>
+                <a href="#!" id="addMyWine" className="modal-close waves-effect waves-green btn">Submit!</a>
               </p>
             </form>
           </div>
