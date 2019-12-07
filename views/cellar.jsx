@@ -102,13 +102,13 @@ module.exports = () => {
             {/* form Start */}
             <form id="wineInfo">
               {/* Type of Wine */}
-              <label>Type</label>
               <select id="type" className="browser-default">
                 <option value="Red">Red Wine</option>
                 <option value="White">White Wine</option>
                 <option value="Rosé">Rosé</option>
                 <option value="Dessert">Dessert</option>
               </select>
+              <label>Type</label>
               {/* Name of Wine */}
               <input id="name" type="text" className="validate" />
               <label className="active">Name</label>
