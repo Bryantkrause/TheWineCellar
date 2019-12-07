@@ -8,16 +8,17 @@ module.exports = (props) => {
         <h1 className="loginText">The Wine Cellar</h1>
         <div className="row center">
           <form className="col s12 loginSpread">
-            <div className="row center">
+            <div className="row center loginSpace">
               <div className="input-field col s12 loginField">
-                <input placeholder="Username" id="usernameCatch" type="text" name="name" />
+                <input className = "inputText" placeholder="Username" id="usernameCatch" type="text" name="name" />
               </div>
               <div className="input-field col s12 loginField">
-                <input placeholder="Password" id="passwordCatch" type="password" name="name" />
+                <input className = "inputText" placeholder="Password" id="passwordCatch" type="password" name="name" />
               </div>
             </div>
             <div className="row center">
-              <a className="waves-effect waves-light btn center" id="submitBtn">Submit</a>
+              <a className="waves-effect waves-light btn center loginButton" id="loginBtn">Login</a>
+              <a className="waves-effect waves-light btn center" id="registerBtn">Register</a>
             </div>
           </form>
         </div>
