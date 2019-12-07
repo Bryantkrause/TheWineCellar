@@ -110,18 +110,21 @@ module.exports = () => {
                 <option value="Dessert">Dessert</option>
               </select>
               {/* Name of Wine */}
-              <label className="active">Name</label>
               <input id="name" type="text" className="validate" />
+              <label className="active">Name</label>
               {/* Brand */}
-              <label className="active">Brand</label>
               <input id="brand" type="text" className="validate" />
+              <label className="active">Brand</label>
               {/* Year */}
-              <label className="active">Year Bottled</label>
               <input id="yearBottled" type="text" className="validate" />
+              <label className="active">Year Bottled</label>
               {/* Quantity */}
-              <label className="active">Quantity</label>
               <input id="quantity" type="text" className="validate" />
+              <label className="active">Quantity</label>
+              {/* Button */}
+              <p>
               <a href="#!" id="addMyWine" className="modal-close waves-effect waves-green btn">Submit!</a>
+              </p>
             </form>
           </div>
           <div className="modal-footer">
