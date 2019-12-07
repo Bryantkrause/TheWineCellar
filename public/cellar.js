@@ -16,7 +16,7 @@ const alllWine = (id, type, typeBody) => {
         <td>${wine.type}</td>
         <td>${wine.yearBottled}</td>
         <td>${wine.name}</td>
-        <td>${wine.quantity}&nbsp;&nbsp;&nbsp;<i class="tiny material-icons">autorenew</i></td>
+        <td><i class="tiny material-icons">remove_circle_outline</i>&nbsp;${wine.quantity}&nbsp;<i class="tiny material-icons">add_circle_outline</i></td>
         `
           document.getElementById(typeBody).append(newWineRow)
         })
@@ -35,7 +35,7 @@ const alllWine = (id, type, typeBody) => {
         <td>${wine.type}</td>
         <td>${wine.yearBottled}</td>
         <td>${wine.name}</td>
-        <td>${wine.quantity}&nbsp;&nbsp;&nbsp;<i class="tiny material-icons">autorenew</i></td>
+        <td><i class="tiny material-icons">remove_circle_outline</i>&nbsp;${wine.quantity}&nbsp;<i class="tiny material-icons">add_circle_outline</i></td>
         `
           document.getElementById(typeBody).append(newWineRow)
         })
