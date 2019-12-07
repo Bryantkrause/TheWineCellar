@@ -5,13 +5,11 @@
 .loginSpread {
   margin-top: 190px;
   text-align: center;
-  /* color: white; */
 }
 
 .loginText {
   font-family: cursive;
   color: white;
-  /* font-size: 50px; */
   margin-top: 0px;
   padding-top: 140px;
   text-align: center;
@@ -32,32 +30,25 @@
   background-image: url(images/loginWine.jpg);
   height: 812px;
   width: 380;
-
 }
 
 .modal .modal-footer {
- 
-    border-radius: 0 0 2px 2px;
-   
-    padding: 4px 6px;
-   
-    height: 60px;
-   
-    width: 100%;
-   
-    text-align: right;
-   
+  border-radius: 0 0 2px 2px;  
+  padding: 4px 6px;  
+  height: 60px;  
+  width: 100%;  
+  text-align: right;
 }
 
 .modal {
-      width: 95%;
+  width: 95%;
 
 }
 
 .ctitle {
-      font-size: 25px;
+  font-size: 25px;
 }
 
 #wineInfo {
-      margin-top: 25px;
+  margin-top: 25px;
 }
