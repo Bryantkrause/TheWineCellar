@@ -43,7 +43,7 @@ module.exports = {
     })
     .then( wine => {
       let q = parseInt(wine.quantity) + parseInt(wineSource.quantity)
-      wine.update({quantity: q})
+      q > 0 ? wine.update({quantity: q}) : wine.destroy()
     })
   } // end updateWine
 } //end module.export
