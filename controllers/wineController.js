@@ -37,7 +37,8 @@ module.exports = {
       } // end where
     })
     .then( wine => {
-      wine.update({quantity: wineSource.quantity})
+      let q = parseInt(wine.quantity) + parseInt(wineSource.quantity)
+      wine.update({quantity: q})
     })
   } // end updateWine
 } //end module.export
