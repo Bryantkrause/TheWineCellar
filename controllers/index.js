@@ -1,4 +1,4 @@
 module.exports = {
-  wines: require('./wineController.js'),
-  users: require('./userController.js')
+  winesC: require('./wineController.js'),
+  usersC: require('./userController.js')
 }

@@ -1,5 +1,5 @@
 const { Wines, Users } = require('../models')
-const { wines } = require('../controllers')
+const { winesC } = require('../controllers')
 
 module.exports = app => {
   // GET one type of wine
@@ -23,9 +23,17 @@ module.exports = app => {
   
   // Add a wine to the database
   app.post('/wines', (req, res) => {
-    Wines.create(req.body)
-    .then(() => {res.sendStatus(200)})
-    .catch(e => console.error(e))
+    winesC.checkWine(req.body)
+    .then( result => {
+      if(!result){ // If wine doesn't exist post wine to DB
+        Wines.create(req.body)
+        .then( r =>  res.send(r.dataValues) )
+        .catch( e => console.error(e) )
+      } else {
+        winesC.updateWine(req.body)
+        res.sendStatus(200)
+      }
+    })
   })
 
   // PUT for updating the quantity of a wine

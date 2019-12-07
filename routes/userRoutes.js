@@ -1,5 +1,5 @@
 const { Users, Wines } = require('../models')
-const { users } = require('../controllers')
+const { usersC } = require('../controllers')
 
 module.exports = app => {
   // GET all users
@@ -30,7 +30,7 @@ module.exports = app => {
   // POST for signing up
   app.post('/users', (req, res) => {
     // Check if username already exist in the table
-    users.checkUser(req.body.username)
+    usersC.checkUser(req.body.username)
       .then(result => {
         if(!result){ // If username doesn't exist
           Users.create(req.body)
