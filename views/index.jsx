@@ -26,11 +26,14 @@ module.exports = (props) => {
         </div>
       </div>
 
-
       {/* Add register fail modal */}
       <div id="login" className="modal failModal">
         <div className="modal-content">
-          <h5 className="center-align">Username Already Exists. Please Choose Another</h5>
+          <h5 className="center-align">Username Already Exists</h5>
+          <div className="row center">
+            <a href="#!" id="showNames" className="waves-effect waves-green btn">View Available Username</a>
+          </div>
+          <h6 className="center-align" id='availableNames'></h6>
         </div>
       </div>
 

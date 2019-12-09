@@ -1,7 +1,6 @@
 let user;
 let pass;
 let person;
-let isRegistered = false;
 
 //notify user of login failure
 const loginFail = () => {
@@ -36,6 +35,19 @@ const userExistCheck = (person) => {
     })
 }
 
+const availableNames = (user) => {
+  let available = user
+  available += `_${Math.round(Math.random() * 100)}`
+  axios.get(`/users/${available}`)
+    .then(response => {
+      if (response.data) {
+        availableNames(user)
+      } else {
+        document.getElementById('availableNames').innerText = `${available}`
+      }
+    })
+}
+
 const login = (user, pass) => {
   axios.get(`/users/${user}/${pass}`)
     .then(response => {
@@ -46,7 +58,6 @@ const login = (user, pass) => {
         localStorage.setItem('username', response.data.username)
         window.location.pathname = `/cellar`
       } else {
-        console.log('pair doesnt match, loginFail')
         loginFail()
       }
     })
@@ -54,21 +65,26 @@ const login = (user, pass) => {
 
 document.getElementById('registerBtn').addEventListener('click', e => {
   e.preventDefault()
-  console.log('register button clicked')
+  document.getElementById('availableNames').innerText = ``
   let person = {
     username: document.getElementById('usernameCatch').value,
     password: document.getElementById('passwordCatch').value
   }
-  userExistCheck(person)
+  //only attempt to register if input field is filled in
+  if (person.username != '' ){
+    userExistCheck(person)
+  }
 })
 
 document.getElementById('loginBtn').addEventListener('click', e => {
   e.preventDefault()
-  console.log('login button clicked')
-  isRegistered = false
   user = document.getElementById('usernameCatch').value,
     pass = document.getElementById('passwordCatch').value
-
   login(user, pass)
 })
 
+//display available usernames
+document.getElementById('showNames').addEventListener('click', e => {
+  user = document.getElementById('usernameCatch').value
+  availableNames(user)
+})
