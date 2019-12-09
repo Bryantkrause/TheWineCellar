@@ -37,13 +37,13 @@ module.exports = app => {
   })
 
   // PUT for updating the quantity of a wine
-  app.put('/wines/:id/:type/:name/:brand/:quantity', (req, res) => {
+  app.put('/wines/:id/:type/:name/:yearBottled/:quantity', (req, res) => {
     Wines.findOne({
       where: {
         userId: parseInt(req.params.id),
         type: req.params.type,
         name: req.params.name,
-        brand: req.params.brand
+        yearBottled: req.params.yearBottled
       }
     })
     .then( wine => wine.update({ quantity: req.params.quantity})) // update the quantity column of the row

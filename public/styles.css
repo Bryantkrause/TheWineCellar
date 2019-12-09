@@ -63,3 +63,11 @@
 #wineInfo {
   margin-top: 25px;
 }
+
+.whiteWine {
+  background-color: #F1F285 !important;
+}
+
+.cognac {
+  background-color: #A3481B !important;
+}
