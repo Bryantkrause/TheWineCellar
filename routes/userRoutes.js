@@ -3,17 +3,17 @@ const { usersC } = require('../controllers')
 
 module.exports = app => {
   // GET all users
-  app.get('/users', (req, res ) => {
-    Users.findAll({include: Wines})
-    .then(users => res.json(users))
-    .catch(e => console.log(e))
+  app.get('/users', (req, res) => {
+    Users.findAll({ include: Wines })
+      .then(users => res.json(users))
+      .catch(e => console.log(e))
   }) // End GET all Users
 
   // GET one user
   app.get('/users/:username', (req, res) => {
-    Users.findOne( {where: { username: req.params.username } })
-      .then( username => res.send(username))
-      .catch( e => console.error(e))
+    Users.findOne({ where: { username: req.params.username } })
+      .then(username => res.send(username))
+      .catch(e => console.error(e))
   }) // End GET one user
 
   // GET for Log in
@@ -24,7 +24,7 @@ module.exports = app => {
         password: req.params.password
       }
     })
-    .then (result => result ? res.send(result) : res.send(false))
+      .then(result => result ? res.send(result) : res.send(false))
   }) // End GET for log in
 
   // POST for signing up
@@ -32,9 +32,9 @@ module.exports = app => {
     // Check if username already exist in the table
     usersC.checkUser(req.body.username)
       .then(result => {
-        if(!result){ // If username doesn't exist
+        if (!result) { // If username doesn't exist
           Users.create(req.body)
-            .then( r => { res.send(r.dataValues) })
+            .then(r => { res.send(r.dataValues) })
             .catch(e => console.error(e))
         } else { // If username already exists
           res.send('User already exists')
