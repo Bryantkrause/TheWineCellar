@@ -1,8 +1,9 @@
 let userId = localStorage.getItem('userId')
 let type = ''
-
+let uid = parseInt(userId)
 // Get all wine
 const alllWine = (uid, type, typeBody) => {
+  console.log(uid)
   if (type === 'allWine') {
     axios.get(`/wines/${uid}`)
       .then(({ data }) => {
@@ -101,22 +102,3 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   document.getElementById('yearBottled').value = ''
   document.getElementById('quantity').value = ''
 })
-
-// get all wines from user storage
-const getAllWine = wine => {
-  axios.get('./wines/:id', wine)
-}
-
-// Display selected wine based on user criteria
-document.getElementById('mAllWine').addEventListener('click', e => {
-  e.preventDefault()
-  getAllWine()
-})
-
-// Get one wine from user storage
-const getWine = wine => {
-  axios.get('./wines/:id/:type', wine)
-    .then(() => {
-      console.log(wine)
-    })
-}
