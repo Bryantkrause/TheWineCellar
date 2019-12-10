@@ -40,6 +40,7 @@
 
 .loginBackground {
   background-image: url(images/loginWine.jpg);
+  background-repeat: no-repeat;
   height: 812px;
   width: 380;
 }
@@ -70,5 +71,14 @@
 }
 
 .cognac {
-  background-color: #A3481B !important;
+  background-color: rgb(163, 72, 27, 0.6) !important;
+}
+.totalSize{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+#addWine {
+  background: rgba(0, 0, 0, 0.5);
+
 }

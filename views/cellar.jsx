@@ -5,84 +5,106 @@ module.exports = () => {
   return (
     <Layout>
       {/* Nav */}
-      <nav className="row">
-        <div className="nav-wrapper">
-          <a id="submitBtn" className="brand-logo left">Wine Cellar</a>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-          </ul>
-        </div>
-      </nav>
+      <div className="loginBackground">
+        <nav className="row">
+          <div className="nav-wrapper">
+            <a id="submitBtn" className="brand-logo left">Wine Cellar</a>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
+            </ul>
+          </div>
+        </nav>
 
-      {/* Body */}
-      <div className="row options">
-        <div className="col s12 m7">
-          <div className="card horizontal modal-trigger" data-set="addWine" data-target="mAddWine">
-            <div className="card-image">
-              <img id="addWine" src="./images/addWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content">
-                <p className="center-align ctitle">Add Wine</p>
+        {/* Body */}
+        <div className="row options">
+          <div className="col s12 m7">
+            <div className="card horizontal modal-trigger" data-set="addWine" data-target="mAddWine">
+              <div className="card-image">
+                <img id="addWine" src="./images/addWine.jpg" />
+              </div>
+              <div className="card-stacked">
+                <div className="card-content">
+                  <p className="center-align ctitle">Add Wine</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col s12 m7">
-          <div className="card horizontal modal-trigger" data-target="mAllWine" data-type="allWine" data-body="wineBody"> 
-            <div className="card-image">
-              <img data-type="allWine" data-body="wineBody" src="./images/allWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content" data-type="allWine" data-body="wineBody">
-                <p className="center-align ctitle" data-type="allWine" data-body="wineBody">All Wine</p>
+          <div className="col s12 m7">
+            <div className="card horizontal modal-trigger" data-target="mAllWine" data-type="allWine" data-body="wineBody">
+              <div className="card-image">
+                <img data-type="allWine" data-body="wineBody" src="./images/allWine.jpg" />
+              </div>
+              <div className="card-stacked">
+                <div className="card-content" data-type="allWine" data-body="wineBody">
+                  <p className="center-align ctitle" data-type="allWine" data-body="wineBody">All Wine</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col s12 m7">
-          <div className="card horizontal red darken-3 modal-trigger" data-body="redWine" data-target="mRedWine" data-type="red">
-            <div className="card-image">
-              <img data-type="red" data-body="redWine" src="./images/redWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content" data-type="red" data-body="redWine">
-                <p className="center-align ctitle white-text" data-type="red" data-body="redWine">Red</p>
+          <div className="col s12 m7">
+            <div className="card horizontal darken-3 modal-trigger" data-body="redWine" data-target="mRedWine" data-type="red">
+              <div className="card-image">
+                <img data-type="red" data-body="redWine" src="./images/redWine.jpg" />
+              </div>
+              <div className="card-stacked red">
+                <div className="card-content" data-type="red" data-body="redWine">
+                  <p className="center-align ctitle " data-type="red" data-body="redWine">Red</p>
+                </div>
+              </div>
+              <div className="card-stacked">
+                <div className="card-content red totalSize" data-type="red" data-body="redWine">
+                  <p className="center-align ctitle black-text" id="redTotal"></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col s12 m7">
-          <div className="card horizontal whiteWine modal-trigger" data-target="mWhiteWine" data-body="whiteWine" data-type="white">
-            <div className="card-image">
-              <img data-type="white" data-body="whiteWine" data-target="mWhiteWine" src="./images/whiteWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content" data-type="white" data-body="whiteWine">
-                <p className="center-align ctitle" data-type="white" data-body="whiteWine">White</p>
+          <div className="col s12 m7">
+            <div className="card horizontal modal-trigger" data-target="mWhiteWine" data-body="whiteWine" data-type="white">
+              <div className="card-image">
+                <img data-type="white" data-body="whiteWine" data-target="mWhiteWine" src="./images/whiteWine.jpg" />
+              </div>
+              <div className="card-stacked">
+                <div className="card-content whiteWine" data-type="white" data-body="whiteWine">
+                  <p className="center-align ctitle" data-type="white" data-body="whiteWine">White</p>
+                </div>
+              </div>
+              <div className="card-stacked">
+                <div className="card-content whiteWine totalSize" data-type="white" data-body="whiteWine">
+                  <p className="center-align ctitle" data-type="white" data-body="whiteWine" id="whiteTotal"></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col s12 m7">
-          <div className="card horizontal pink lighten-3 modal-trigger" data-type="rose" data-body="roseWine" data-target="mRoseWine">
-            <div className="card-image">
-              <img data-type="rose" data-body="roseWine" src="./images/roseWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content" data-type="rose" data-body="roseWine">
-                <p className="center-align ctitle" data-type="rose" data-body="roseWine">Rosé</p>
+          <div className="col s12 m7">
+            <div className="card horizontal lighten-3 modal-trigger" data-type="rose" data-body="roseWine" data-target="mRoseWine">
+              <div className="card-image">
+                <img data-type="rose" data-body="roseWine" src="./images/roseWine.jpg" />
+              </div>
+              <div className="card-stacked">
+                <div className="card-content pink" data-type="rose" data-body="roseWine">
+                  <p className="center-align ctitle" data-type="rose" data-body="roseWine">Rosé</p>
+                </div>
+              </div>
+              <div className="card-stacked">
+                <div className="card-content pink totalSize" data-type="rose" data-body="roseWine">
+                  <p className="center-align ctitle" data-type="rose" data-body="roseWine" id="roseTotal"></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col s12 m7">
-          <div className="card horizontal cognac modal-trigger" data-target="mDessertWine" data-type="dessert" data-body="dessertWine">
-            <div className="card-image">
-              <img data-type="dessert" data-body="dessertWine" data-target="mDessertWine" src="./images/dessertWine.jpg" />
-            </div>
-            <div className="card-stacked">
-              <div className="card-content" data-type="dessert" data-body="dessertWine">
-                <p className="center-align ctitle" data-type="dessert" data-body="dessertWine">Dessert</p>
+          <div className="col s12 m7">
+            <div className="card horizontal modal-trigger" data-target="mDessertWine" data-type="dessert" data-body="dessertWine">
+              <div className="card-image">
+                <img data-type="dessert" data-body="dessertWine" data-target="mDessertWine" src="./images/dessertWine.jpg" />
+              </div>
+              <div className="card-stacked">
+                <div className="card-content cognac" data-type="dessert" data-body="dessertWine">
+                  <p className="center-align ctitle" data-type="dessert" data-body="dessertWine">Dessert</p>
+                </div>
+              </div>
+              <div className="card-stacked">
+                <div className="card-content cognac totalSize" data-type="dessert" data-body="dessertWine">
+                  <p className="center-align ctitle" data-type="dessert" data-body="dessertWine" id="dessertTotal"></p>
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +143,7 @@ module.exports = () => {
             </form>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* Display all wine */}
@@ -141,7 +163,7 @@ module.exports = () => {
             </table>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* Display red wine */}
@@ -160,7 +182,7 @@ module.exports = () => {
             </table>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* Display white wine */}
@@ -179,7 +201,7 @@ module.exports = () => {
             </table>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* Display rosé wine */}
@@ -198,7 +220,7 @@ module.exports = () => {
             </table>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* display Dessert Wine */}
@@ -217,7 +239,7 @@ module.exports = () => {
             </table>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat" id="modalClose">Close</a>
           </div>
         </div>
         {/* End Div */}
