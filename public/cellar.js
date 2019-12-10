@@ -64,7 +64,8 @@ document.addEventListener('click', e => {
     axios.put(`/wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText = currentQuantity
   } else if(e.target.className === 'material-icons removeOne'){
-    let currentQuantity = parseInt(document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText) - 1
+    let currentQuantity = parseInt(document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText)
+    currentQuantity === 0 ? currentQuantity : currentQuantity--
     // console.log(`ID is ${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`)
     // console.log(`removeOne is pressed and current q is ${currentQuantity}`)
     // console.log(`axios put URL is /wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
