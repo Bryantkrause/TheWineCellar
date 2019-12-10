@@ -56,22 +56,36 @@ document.addEventListener('click', e => {
   if (e.target.dataset.body === 'wineBody' || e.target.dataset.body === 'redWine' || e.target.dataset.body === 'whiteWine' || e.target.dataset.body === 'roseWine' || e.target.dataset.body === 'dessertWine') {
     document.getElementById(e.target.dataset.body).innerHTML = ''
     alllWine(userId, e.target.dataset.type, e.target.dataset.body)
-  } else if(e.target.className === 'material-icons addOne'){
+  } else if (e.target.className === 'material-icons addOne') {
     let currentQuantity = parseInt(document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText) + 1
     // console.log(`ID is ${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`)
     // console.log(`addOne is pressed and current q is ${currentQuantity}`)
     // console.log(`axios put URL is /wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     axios.put(`/wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText = currentQuantity
-  } else if(e.target.className === 'material-icons removeOne'){
+  } else if (e.target.className === 'material-icons removeOne') {
     let currentQuantity = parseInt(document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText) - 1
     // console.log(`ID is ${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`)
     // console.log(`removeOne is pressed and current q is ${currentQuantity}`)
     // console.log(`axios put URL is /wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     axios.put(`/wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText = currentQuantity
-  } 
+  }
 })
+
+//sum wine total by type
+const getTotal = (type) => {
+  document.getElementById(`${type}Total`).innerHTML = ('')
+  axios.get(`/wines/${uid}/${type}`)
+    .then(({ data }) => {
+      let total = 0
+      data.forEach(wine => {
+        total += wine.quantity
+      }
+      )
+      var totalWine = document.getElementById(`${type}Total`).append(`Total: ${total}`)
+    })
+}
 
 // Add wine Modal
 document.addEventListener('DOMContentLoaded', function () {
@@ -102,3 +116,21 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   document.getElementById('yearBottled').value = ''
   document.getElementById('quantity').value = ''
 })
+
+//update display quantities
+document.addEventListener('click', e => {
+  if (e.target.id === 'modalClose' || e.target.id === 'addMyWine') {
+    updateTotals()
+  }
+})
+
+//displays updated totals
+const updateTotals = () => {
+  getTotal('red')
+  getTotal('white')
+  getTotal('dessert')
+  getTotal('rose')
+}
+
+//updates totals on page load
+updateTotals()
