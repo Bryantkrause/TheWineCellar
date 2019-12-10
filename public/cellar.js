@@ -115,11 +115,13 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   document.getElementById('brand').value = ''
   document.getElementById('yearBottled').value = ''
   document.getElementById('quantity').value = ''
+  updateTotals()ç
 })
 
 //update display quantities
 document.addEventListener('click', e => {
-  if (e.target.id === 'modalClose' || e.target.id === 'addMyWine') {
+  console.log(e.target.id)
+  if (e.target.id === 'modalClose') {
     updateTotals()
   }
 })
