@@ -116,7 +116,7 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   document.getElementById('brand').value = ''
   document.getElementById('yearBottled').value = ''
   document.getElementById('quantity').value = ''
-  updateTotals()ç
+  updateTotals()
 })
 
 //update display quantities
