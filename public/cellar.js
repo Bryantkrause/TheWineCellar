@@ -63,7 +63,7 @@ document.addEventListener('click', e => {
     // console.log(`axios put URL is /wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     axios.put(`/wines/${userId}/${e.target.dataset.type}/${e.target.dataset.name}/${e.target.dataset.yearbottled}/${currentQuantity}`)
     document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText = currentQuantity
-  } else if(e.target.className === 'material-icons removeOne'){
+  } else if (e.target.className === 'material-icons removeOne') {
     let currentQuantity = parseInt(document.getElementById(`${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`).innerText)
     currentQuantity === 0 ? currentQuantity : currentQuantity--
     // console.log(`ID is ${e.target.dataset.type}.${e.target.dataset.name}.${e.target.dataset.yearbottled}`)
@@ -97,7 +97,18 @@ document.addEventListener('DOMContentLoaded', function () {
 // Add wine to user storage
 const addWine = wine => {
   axios.post('./wines', wine)
+  setTimeout(updateTotals, 1000)
 }
+
+//displays updated totals
+const updateTotals = () => {
+  getTotal('red')
+  getTotal('white')
+  getTotal('dessert')
+  getTotal('rose')
+  console.log('delay')
+}
+
 
 // retrieve wine based on user selection
 document.getElementById('addMyWine').addEventListener('click', e => {
@@ -116,8 +127,8 @@ document.getElementById('addMyWine').addEventListener('click', e => {
   document.getElementById('brand').value = ''
   document.getElementById('yearBottled').value = ''
   document.getElementById('quantity').value = ''
-  updateTotals()
-})
+}
+)
 
 //update display quantities
 document.addEventListener('click', e => {
@@ -126,14 +137,6 @@ document.addEventListener('click', e => {
     updateTotals()
   }
 })
-
-//displays updated totals
-const updateTotals = () => {
-  getTotal('red')
-  getTotal('white')
-  getTotal('dessert')
-  getTotal('rose')
-}
 
 //updates totals on page load
 updateTotals()
