@@ -106,7 +106,6 @@ const updateTotals = () => {
   getTotal('white')
   getTotal('dessert')
   getTotal('rose')
-  console.log('delay')
 }
 
 
