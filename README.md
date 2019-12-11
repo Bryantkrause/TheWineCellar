@@ -10,3 +10,12 @@ track duration of time from being bottled
 categorize by type
 categorize by subtype
 Remove wine once consumed
+
+Technologies used in the making of this app
+"dotenv"
+"express"
+"express-react-views"
+"mysql2"
+"react"
+"react-dom"
+"sequelize"
